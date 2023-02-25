@@ -21,16 +21,14 @@ int main()
 		}
 		case 2:
 		{
-			cpr::Response r = cpr::Post(cpr::Url{ "http://httpbin.org/post" },
-				cpr::Payload{ {"key", "value"} });
+			cpr::Response r = cpr::Post(cpr::Url{ "http://httpbin.org/post" });
 			std::cout << r.text << std::endl;
 			std::cout << "status code " << r.status_code << std::endl;
 			break;
 		}
 		case 3:
 		{
-			cpr::Response r = cpr::Put(cpr::Url{ "http://httpbin.org/put" },
-							  cpr::Payload{ {"key", "value"} });
+			cpr::Response r = cpr::Put(cpr::Url{ "http://httpbin.org/put" });
 			std::cout << r.text << std::endl;
 			std::cout << "status code " << r.status_code << std::endl;
 			break;
@@ -43,8 +41,7 @@ int main()
 		}
 		case 5:
 		{
-			cpr::Response r = cpr::Patch(cpr::Url{ "http://httpbin.org/patch" },
-							  cpr::Payload{ {"key", "value"} });
+			cpr::Response r = cpr::Patch(cpr::Url{ "http://httpbin.org/patch" });
 			std::cout << r.text << std::endl;
 			std::cout << "status code " << r.status_code << std::endl;
 			break;
